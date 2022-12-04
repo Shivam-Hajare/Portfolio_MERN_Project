@@ -7,18 +7,17 @@ const app = express();
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.json())
 dotenv.config({ path: "./config.env" })
 
 const PORT = process.env.PORT
 
 
 require("./db/connection")
+//const User = require("./db/model/userSchema")
+//calling get req post from router file
+app.use(require("./router/auth"))
 
-
-app.get("/", (req, res) => {
-    res.send("hello world")
-})
 
 
 
