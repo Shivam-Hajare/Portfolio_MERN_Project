@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router();
 const bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
 //database connection and userSchema file imported
 require("../db/connection")
 const User = require("../db/model/userSchema")
@@ -67,34 +68,42 @@ router.post("/register", async (req, res) => {
 })
 
 router.post("/signin", async (req, res) => {
-    try{
+    try {
+        let token;
         const { email, password } = req.body;
 
-        if (!email ||!password) {
+        if (!email || !password) {
             console.log("Plaese fill all filds");
             return res.status(422).json({ error: "Plaese fill all filds" })
         }
-        const userLogin = await User.findOne({email:email});
-        if(!userLogin)
-        {
+        const userLogin = await User.findOne({ email: email });
+        if (!userLogin) {
             return res.status(422).json({ error: "user error" })
         }
-        else{
-            const DBPassword=userLogin.password;
-            const match = await bcrypt.compare(password,DBPassword);
+        else {
+            //JWT token generation
+            token= userLogin.generateAuthToken();
+            //to token in cookie
+            res.cookie("jwt_token",token,{
+                expires: new Date(Date.now()+25920000000),
+                httpOnly:true
+            })
 
-        if(match) {
-            return res.status(422).json({ message:"loged in" })
-        }
-        else
-        return res.status(422).json({error:"username and pass is incorrect" })
-           
+            //password checking with db
+            const DBPassword = userLogin.password;
+            const match = await bcrypt.compare(password, DBPassword);
+
+            if (match) {
+                return res.status(422).json({ message: "loged in" })
+            }
+            else
+                return res.status(422).json({ error: "username and pass is incorrect" })
+
         }
 
 
     }
-    catch(err)
-    {
+    catch (err) {
         console.log(err);
     }
 
