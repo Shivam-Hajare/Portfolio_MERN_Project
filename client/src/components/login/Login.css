@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.signin_section{
+    width: 100%;
+}
+.signin_container{
+    margin: auto;
+    padding: 30px;
+
+}
+.signin_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.cover{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+width:300px;
+height: 400px;
+display: flex;
+gap: 2rem;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.right_h1{
+
+}
+.inputAll{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+.input_div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input_tags{
+    border: none;
+    outline: none;
+    padding: 2px;
+    border-bottom: 1px solid gray;
+    width: 220px;
+}
+.login_btn{
+    width: 150px;
+}
+.other_login_src{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.other_login_src i:hover{
+    color: red;
+}
+.left{
+width: 300px;
+height: 300px;
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+align-items: center;
+justify-content: center;
+}
+
+.signin_img{
+    width: 250px;
+}
+.left_link{
+    text-decoration: none;
+    color: black;
+}
+
+
+

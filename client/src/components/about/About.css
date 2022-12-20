@@ -1,0 +1,96 @@
+.about_section{
+    width: 100%;
+}
+.container{
+    padding: 30px;
+    
+    /* margin-top: 50px; */
+}
+.about_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 750px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.about_card a {
+    text-decoration: none;
+    color: black;
+    
+}
+.about_card a:hover{
+    color: red;
+}
+.col_one{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width:240px ;
+    padding: 10px;
+}
+.photo{
+    display: flex;
+}
+.photo img{
+    width: 150px;
+}
+.social_contact_links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.col_two{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width:240px ;
+    padding: 10px;
+}
+.col_two_subDiv h6{
+    color: blue;
+}
+.tabs_css{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.user_contact_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.col_three{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 9.8rem;
+    width:240px ;
+}
+.editbtnDiv{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 0.5rem;
+
+}
+.edit_btn{
+    border: none;
+}
+.edit_btn:hover{
+   color: red;
+}
+.userData{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.userData h6{
+    color: blue;
+    font-weight: 500;
+}

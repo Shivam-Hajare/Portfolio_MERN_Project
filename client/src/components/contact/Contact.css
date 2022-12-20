@@ -1,0 +1,69 @@
+.contact_section{
+    width: 100%;
+}
+.contact_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userContact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.contactDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgb(237, 240, 241);
+    border-radius: 8px;
+    padding: 2px;
+    width: 300px;
+    
+}
+
+.get_in_toch_row{
+
+}
+.get_in_touch_card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border: 1px solid rgb(244, 234, 234);
+    border-radius: 15px;
+padding: 20px;
+margin: 5px;
+
+}
+.get_in_touch_card h3{
+    font-weight: 550;
+}
+.getInTouchForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.getInTouchCard_inputs{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2px;
+    justify-content: space-between;
+
+}
+.getInTouchCard_inputs input{
+    border: 1px solid rgb(239, 231, 231);
+    outline: none;
+    padding: 3px;
+    height: 30px;
+
+}
+.msgButton button{
+}

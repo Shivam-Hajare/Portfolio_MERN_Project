@@ -3,6 +3,8 @@ const dotenv = require("dotenv")
 const express = require("express")
 const app = express();
 
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 
 
 const bodyParser = require("body-parser");
@@ -17,17 +19,6 @@ require("./db/connection")
 //const User = require("./db/model/userSchema")
 //calling get req post from router file
 app.use(require("./router/auth"))
-
-
-
-
-
-
-
-
-
-
-
 
 
 app.listen(PORT, () => {
